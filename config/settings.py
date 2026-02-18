@@ -41,8 +41,16 @@ INSTALLED_APPS = [
     'registration',
     'session',
     'rest_framework',
+    'rest_framework_simplejwt',
+    'testjwt',
     'student',
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

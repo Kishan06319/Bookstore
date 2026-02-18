@@ -23,4 +23,5 @@ urlpatterns = [
     path('registration/', include('registration.urls')),
     path('session/', include('session.urls')),
     path('api/registration/', include('student.urls')),
+    path('api/testjwt/', include('testjwt.urls')),
 ]
