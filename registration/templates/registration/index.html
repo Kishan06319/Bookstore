@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>user data</title>
+  </head>
+  <body>
+    <h1>user data</h1>
+    <p>{{ user_input |safe }}</p>
+    {% for u in users %}
+    <p>{{ u.name |safe }} - {{ u.email |safe }}</p>
+    {% endfor %}
+    <h2>&lt;scripr&gt;</h2>
+  </body>
+</html>

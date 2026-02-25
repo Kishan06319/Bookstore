@@ -3,6 +3,13 @@ from .forms import RegistrationForm
 from .models import Registration
 from django.contrib.auth.hashers import make_password
 
+def list_user(request):
+    user_input="<script>alert(`you are hacked. stealing cookies. ${document.cookie}`)</script>"
+    users=Registration.objects.all()
+    return render(request, 'registration/index.html', {
+        'users': users, 
+        "user_input":user_input
+        }) 
 
 def registration_form(request):
     if request.method == 'POST':
